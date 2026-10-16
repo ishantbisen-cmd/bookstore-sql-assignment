@@ -131,3 +131,21 @@ SELECT COUNT(*)             AS `Total Books`,
        MAX(price)           AS `Highest Price`,
        MIN(price)           AS `Lowest Price`
 FROM Books;
+
+
+-- =====================================================================
+-- Section 5: GROUP BY and HAVING
+-- =====================================================================
+
+-- Task 13: Display the average book price for each category.
+SELECT category,
+       ROUND(AVG(price), 2) AS `Average Price`
+FROM Books
+GROUP BY category;
+
+-- Task 14: Display only those categories whose average price is greater than 650.
+SELECT category,
+       ROUND(AVG(price), 2) AS `Average Price`
+FROM Books
+GROUP BY category
+HAVING AVG(price) > 650;
