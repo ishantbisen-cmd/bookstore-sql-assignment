@@ -181,3 +181,27 @@ SELECT b.book_id,
 FROM Authors a
 RIGHT JOIN Books b
         ON a.author_id = b.author_id;
+
+
+-- =====================================================================
+-- Section 7: Data Manipulation
+-- =====================================================================
+
+-- Task 18: Insert a new book into the Books table.
+INSERT INTO Books (book_id, title, author_id, category, price, published_year)
+VALUES (13, 'Clean Agile', 1, 'Programming', 650.00, 2019);
+
+SELECT * FROM Books WHERE book_id = 13;
+
+-- Task 19: Update the price of the book inserted above.
+UPDATE Books
+SET price = 725.00
+WHERE book_id = 13;
+
+SELECT * FROM Books WHERE book_id = 13;
+
+-- Task 20: Delete the book record inserted above.
+DELETE FROM Books
+WHERE book_id = 13;
+
+SELECT * FROM Books WHERE book_id = 13;
