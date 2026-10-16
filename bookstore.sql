@@ -117,3 +117,17 @@ ORDER BY price DESC;
 SELECT * FROM Books
 ORDER BY price DESC
 LIMIT 3;
+
+
+-- =====================================================================
+-- Section 4: Aggregate Functions
+-- =====================================================================
+
+-- Task 12: Total number of books, total price, average price,
+--          highest price and lowest price.
+SELECT COUNT(*)             AS `Total Books`,
+       SUM(price)           AS `Total Price`,
+       ROUND(AVG(price), 2) AS `Average Price`,
+       MAX(price)           AS `Highest Price`,
+       MIN(price)           AS `Lowest Price`
+FROM Books;
