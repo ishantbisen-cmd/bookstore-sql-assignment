@@ -83,8 +83,8 @@ Authors (1) ────────< (many) Books
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/ishantbisen-cmd/bookstore-sql-assignment.git
+cd bookstore-sql-assignment
 ```
 
 ### 2. Start MySQL

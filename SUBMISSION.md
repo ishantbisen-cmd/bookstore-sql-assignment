@@ -2,8 +2,8 @@
 
 | Item | Value |
 |---|---|
-| GitHub Repository | _to be added after push_ |
-| Pull Request | _to be added after PR is opened_ |
+| GitHub Repository | https://github.com/ishantbisen-cmd/bookstore-sql-assignment |
+| Pull Request | https://github.com/ishantbisen-cmd/bookstore-sql-assignment/pull/1 |
 | Branch | `feature/bookstore-sql-assignment` |
 
 ## Deliverables
