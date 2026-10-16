@@ -6,7 +6,6 @@
 -- ---------------------------------------------------------------------
 -- Database Setup
 -- ---------------------------------------------------------------------
-DROP DATABASE IF EXISTS bookstore;
 CREATE DATABASE bookstore;
 USE bookstore;
 
@@ -79,3 +78,28 @@ FROM Books;
 
 -- Task 4: Display all unique book categories.
 SELECT DISTINCT category FROM Books;
+
+
+-- =====================================================================
+-- Section 2: Filtering Data
+-- =====================================================================
+
+-- Task 5: Display books priced above 700.
+SELECT * FROM Books
+WHERE price > 700;
+
+-- Task 6: Display books priced between 500 and 800 (inclusive).
+SELECT * FROM Books
+WHERE price BETWEEN 500 AND 800;
+
+-- Task 7: Display books that belong to the Programming category.
+SELECT * FROM Books
+WHERE category = 'Programming';
+
+-- Task 8: Display books whose titles start with the letter S.
+SELECT * FROM Books
+WHERE title LIKE 'S%';
+
+-- Task 9: Display books published after 2020.
+SELECT * FROM Books
+WHERE published_year > 2020;
