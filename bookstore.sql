@@ -205,3 +205,28 @@ DELETE FROM Books
 WHERE book_id = 13;
 
 SELECT * FROM Books WHERE book_id = 13;
+
+
+-- =====================================================================
+-- Section 8: Creating Tables and Constraints
+-- =====================================================================
+
+-- Task 21: Create the Publishers table with PRIMARY KEY, NOT NULL,
+--          UNIQUE and DEFAULT constraints.
+CREATE TABLE Publishers (
+    publisher_id     INT          PRIMARY KEY,
+    publisher_name   VARCHAR(100) NOT NULL UNIQUE,
+    country          VARCHAR(50)  NOT NULL DEFAULT 'India',
+    established_year INT
+);
+
+DESCRIBE Publishers;
+
+INSERT INTO Publishers (publisher_id, publisher_name, country, established_year) VALUES
+(1, 'Penguin Random House', 'USA', 2013);
+
+-- country is omitted here, so it takes the DEFAULT value 'India'.
+INSERT INTO Publishers (publisher_id, publisher_name, established_year) VALUES
+(2, 'Rupa Publications', 1936);
+
+SELECT * FROM Publishers;
