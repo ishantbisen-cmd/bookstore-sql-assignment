@@ -149,3 +149,35 @@ SELECT category,
 FROM Books
 GROUP BY category
 HAVING AVG(price) > 650;
+
+
+-- =====================================================================
+-- Section 6: Joins
+-- =====================================================================
+
+-- Task 15: Display each book along with its author's name (INNER JOIN).
+SELECT b.book_id,
+       b.title,
+       a.author_name
+FROM Books b
+INNER JOIN Authors a
+        ON b.author_id = a.author_id;
+
+-- Task 16: Display all authors along with the books they have written (LEFT JOIN).
+--          Authors without books still appear, with NULL for the book columns.
+SELECT a.author_id,
+       a.author_name,
+       b.title
+FROM Authors a
+LEFT JOIN Books b
+       ON a.author_id = b.author_id;
+
+-- Task 17: Display all books along with their author details (RIGHT JOIN).
+SELECT b.book_id,
+       b.title,
+       a.author_id,
+       a.author_name,
+       a.country
+FROM Authors a
+RIGHT JOIN Books b
+        ON a.author_id = b.author_id;
