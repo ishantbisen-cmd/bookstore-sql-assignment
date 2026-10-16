@@ -103,3 +103,17 @@ WHERE title LIKE 'S%';
 -- Task 9: Display books published after 2020.
 SELECT * FROM Books
 WHERE published_year > 2020;
+
+
+-- =====================================================================
+-- Section 3: Sorting and Limiting Results
+-- =====================================================================
+
+-- Task 10: Display books sorted by price in descending order.
+SELECT * FROM Books
+ORDER BY price DESC;
+
+-- Task 11: Display the top 3 most expensive books.
+SELECT * FROM Books
+ORDER BY price DESC
+LIMIT 3;
